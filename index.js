@@ -10,6 +10,8 @@ const app = express();
 mongoose.connect('mongodb://localhost/drivergo');
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
+
 let db = mongoose.connection;
 
 // check connection
